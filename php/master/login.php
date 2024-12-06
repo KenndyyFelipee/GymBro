@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYMBRO LOGIN</title>
-    <link rel="stylesheet" href="/GYMBRO1/css/STYLE-LOGIN.css">
+    <link rel="stylesheet" href="../css/STYLE-LOGIN.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="/GYMBRO1/javascript/SCRIPT-LOGIN.js" defer></script>
-    <link rel="shortcut icon" href="/GYMBRO1/img/gymbrologoteste.png" type="image/x-icon">
+    <script src="../javascript/SCRIPT-LOGIN.js" defer></script>
+    <link rel="shortcut icon" href="../img/gymbrologoteste.png" type="image/x-icon">
 </head>
 
 <body>
@@ -24,13 +24,13 @@
                     <input type="checkbox">
                     Lembrar minha senha
                 </label>
-                <a href="/GYMBRO1/html/esqueceuasenha.html">Esqueceu sua senha?</a>
+                <a href="../html/esqueceuasenha.html">Esqueceu sua senha?</a>
             </div>
             <button type="submit">Entrar</button>
             <p></p>
             <button type="button" id="clearButton">Limpar</button>
             <div class="divider"></div>
-            <p>Não tem uma conta?<a href="/GYMBRO1/html/cadastro.html" title="Criar uma conta">Cadastre-se</a></p>
+            <p>Não tem uma conta?<a href="../html/cadastro.html" title="Criar uma conta">Cadastre-se</a></p>
         </form>
     </div>
 
