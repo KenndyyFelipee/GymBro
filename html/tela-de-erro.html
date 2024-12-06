@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro - GymBRO</title>
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e1e; 
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            position: relative;
+        }
+
+        
+        .error-container {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 6rem;
+            color: #ff6600;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff6600; 
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #1e1e1e; 
+            background-color: #ff6600; 
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #cc5200; 
+        }
+
+       
+        button.voltar {
+            position: fixed;
+            top: 23px;
+            left: 15px;
+            padding: 10px 15px;
+            font-size: 15px;
+            background-color: rgb(255, 136, 0);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        button.voltar:hover {
+            background-color: rgb(255, 120, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão de voltar -->
+    <button class="voltar" onclick="voltarPagina()">Voltar</button>
+
+    <div class="error-container">
+        <h1>GymBro</h1>
+        <br><br>
+        <h1>404</h1>
+        <p>Ops! Algo deu errado.</p>
+        <p>A página que você está procurando não foi encontrada.</p>
+    </div>
+
+    <script>
+        
+        function voltarPagina() {
+            window.history.back();  
+        }
+    </script>
+
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</body>
+</html>
