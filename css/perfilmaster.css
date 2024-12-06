@@ -1,0 +1,99 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins',  sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    background: #d36600; /* Cor de destaque */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #d36600; /* Cor ao passar o mouse */
+}
+
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #d36600;
+    padding-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #d36600;
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}

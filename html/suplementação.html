@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplementação - Guia Completo</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Modo escuro */
+        body.dark-mode {
+            background: #121212;
+            color: #ddd;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d36600, #d36600);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Modo escuro - header */
+        body.dark-mode header {
+            background: linear-gradient(135deg, #333, #444);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .main-container {
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #d36600;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        /* Modo escuro - título da seção */
+        body.dark-mode .section-title {
+            color: #ff9800;
+        }
+
+        .supplement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .supplement-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s ease;
+        }
+
+        /* Modo escuro - suplemento */
+        body.dark-mode .supplement-card {
+            background-color: #333;
+            color: #ddd;
+        }
+
+        .supplement-card:hover {
+            transform: scale(1.05);
+        }
+
+        .supplement-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .supplement-card h3 {
+            color: #d36600;
+            margin-bottom: 10px;
+            font-size: 1.6em;
+        }
+
+        /* Modo escuro - título do suplemento */
+        body.dark-mode .supplement-card h3 {
+            color: #ff9800;
+        }
+
+        .supplement-card p {
+            color: #000000;
+            font-size: 1.1em;
+        }
+
+        /* Modo escuro - parágrafo */
+        body.dark-mode .supplement-card p {
+            color: #bbb;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Modo escuro - footer */
+        body.dark-mode footer {
+            background-color: #333;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2em;
+            }
+
+            .supplement-list {
+                grid-template-columns: 1fr;
+            }
+
+            .supplement-card img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Botão de modo escuro */
+        button {
+            background-color: #ff8000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s ease, background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #ff5722;
+        }
+
+        /* Modo escuro - botão */
+        body.dark-mode button {
+            background-color: #333;
+            color: #ff8000;
+        }
+
+        button.dark-mode:hover {
+            background-color: #444;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Suplementação - Guia Completo</h1>
+        <button id="mode-toggle" onclick="toggleDarkMode()">Ativar Modo Escuro</button>
+        <button onclick="window.location.href='Treino.html'" style="position: absolute; top: 20px; left: 20px; background-color: #d36600; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Voltar
+        </button>
+    </header>
+
+    <div class="main-container">
+        <h2 class="section-title">Tipos de Suplementos e Seus Benefícios</h2>
+
+        <div class="supplement-list">
+            <!-- Suplemento 1 -->
+            <div class="supplement-card">
+                <img src="https://images.tcdn.com.br/img/img_prod/655345/100_whey_protein_chocolate_900g_integralmedica_12857_1_74206567f33accdd1dae9a4ede65da72.png" alt="Whey Protein">
+                <h3>Whey Protein</h3>
+                <p>O Whey Protein é uma proteína de rápida absorção, ideal para recuperação muscular após treinos intensos.</p>
+            </div>
+
+            <!-- Suplemento 2 -->
+            <div class="supplement-card">
+                <img src="https://lojamaxtitanium.vteximg.com.br/arquivos/ids/157977-3840-0/Creatina-Creapure-250g.png?v=638470625756800000" alt="Creatina">
+                <h3>Creatina</h3>
+                <p>A Creatina aumenta a força e a resistência muscular, além de ajudar no ganho de massa muscular.</p>
+            </div>
+
+            <!-- Suplemento 3 -->
+            <div class="supplement-card">
+                <img src="https://paguemenos.vtexassets.com/arquivos/ids/817816/BCAA-2044-mg-90-Caps.png?v=638441375199570000" alt="BCAA">
+                <h3>BCAA</h3>
+                <p>Os BCAAs (Aminoácidos de Cadeia Ramificada) ajudam na recuperação muscular e no combate ao catabolismo.</p>
+            </div>
+
+            <!-- Suplemento 4 -->
+            <div class="supplement-card">
+                <img src="https://paguemenos.vtexassets.com/arquivos/ids/929620-800-auto?v=638616778223230000&width=800&height=auto&aspect=true" alt="Glutamina">
+                <h3>Glutamina</h3>
+                <p>A Glutamina é um aminoácido essencial para a recuperação muscular e redução do cansaço.</p>
+            </div>
+
+            <!-- Suplemento 5 -->
+            <div class="supplement-card">
+                <img src="https://integralmedica.vtexassets.com/arquivos/ids/165843/7568_IMAGENS-3DS-NOVOS-FRASCOS_VITAPURE.png?v=638316035914130000" alt="Multivitamínico">
+                <h3>Multivitamínico</h3>
+                <p>O multivitamínico fornece as vitaminas e minerais essenciais para o bom funcionamento do organismo.</p>
+            </div>
+
+            <!-- Suplemento 6 -->
+            <div class="supplement-card">
+                <img src="https://dmvfarma.vtexassets.com/arquivos/ids/245872-800-auto?v=638561472285730000&width=800&height=auto&aspect=true" alt="Ômega 3">
+                <h3>Ômega 3</h3>
+                <p>O Ômega 3 melhora a saúde cardiovascular, reduz inflamações e é essencial para a função cerebral.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 GYMBRO - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para alternar entre os modos
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.getElementById('mode-toggle');
+
+            body.classList.toggle('dark-mode');
+            
+            // Muda o texto do botão conforme o estado
+            if (body.classList.contains('dark-mode')) {
+                button.textContent = 'Desativar Modo Escuro';
+            } else {
+                button.textContent = 'Ativar Modo Escuro';
+            }
+
+            saveModePreference();
+        }
+
+        // Verifica se o modo escuro foi preferido previamente e aplica
+        function saveModePreference() {
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode ? 'true' : 'false');
+        }
+
+        // Carrega a preferência do usuário ao iniciar a página
+        function loadModePreference() {
+            const savedMode = localStorage.getItem('darkMode');
+            if (savedMode === 'true') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('mode-toggle').textContent = 'Desativar Modo Escuro';
+            }
+        }
+
+        // Carregar a preferência do modo escuro ao carregar a página
+        window.onload = loadModePreference;
+    </script>
+
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <!-- Fim VLibras Widget -->
+</body>
+</html>

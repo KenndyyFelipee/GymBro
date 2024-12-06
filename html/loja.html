@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0" />
+
+    <title>GymBro</title>
+
+    <script src="/javascript/script.js"></script>
+
+    <link rel="stylesheet" href="/css/loja.css">
+
+    <link rel="icon" href="/img/gymbrologoteste.png">
+
+    <script src="/javascript/scriptLoja.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBRO</title>
+    
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/menu.js" defer>
+        function voltarPagina() {
+            window.history.back();  // Volta para a página anterior no histórico
+        }
+    </script>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+
+
+</head>
+<body>
+<!-- topo site -->
+    <header>
+
+        <div class="interface">
+            <div class="logo">
+                <a href="/html/paginainicial.html">
+                <img src="/img/gymbrologoteste.png" alt="imagem logo" width="110px" height="100px">
+                </a>
+            </div> <!--fim logo-->
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="/html/paginainicial.html">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="/php/master/login.php"><input type="button" id="login" value="Login" onclick=""></a></li>
+                    <li><a href="/html/lojaPessoal.html">Produtos</a></li>
+                </ul>
+            </nav> <!--fim navbar-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div btn-fechar>
+                    <i class="bi bi-x"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="/html/paginainicial.html">Início</a></li>
+                        <li><a href="/html/cadastro.html">Cadastro</a></li>
+                        <li><a href="/php/master/login.php"><input type="button" id="login" value="Login" onclick=""></a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Planos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+        </div>
+
+    </header>
+ <!-- pesquisa de produtos -->
+    <div class="background_search">
+
+        <div class="search_box">
+
+            <form id="form" method="GET" action="../php/BarraDePesquisa/search_products.php">
+                <input type="text" id="caixa_de_pesquisa" name="caixa_de_pesquisa" class="search_txt" placeholder="Pesquisar">
+                <button type="submit" id="submit">
+                    <img src="https://images.vexels.com/content/143356/preview/search-magnifying-glass-45dad4.png" alt="Pesquisar">
+                </button>
+            </form>
+
+            <div id="resultados"></div>
+            
+            <div id="resultados"></div>
+
+        </div>
+
+
+    </div>
+
+<!-- slide -->
+    <section class="slider">
+
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro" id="primeiro">
+                <img class="img-Pc" src="/img/promoçao1-Pc.jpg" alt="Imagem da propaganda 1">
+                <img class="img-Mobile" src="/img/promoçao1-mobile.jpg" alt="Imagem da propaganda 1">
+            </div>
+            <div class="slide-box">
+                <img class="img-Pc" src="/img/promoçao2-Pc.jpg" alt="Imagem da propaganda 2">
+                <img class="img-Mobile" src="/img/promoçao2-mobile.jpg" alt="Imagem da propaganda 2">
+            </div>
+            <div class="slide-box">
+                <img class="img-Pc" src="/img/promoçao3-Pc.jpg" alt="Imagem da propaganda 3">
+                <img class="img-Mobile" src="/img/promoçao3-mobile.jpg" alt="Imagem da propaganda 3">
+            </div>
+            
+            <button class="botaoS" id="botaoS" ><span>‹</span></button>
+            <button class="botaoS2" id="botaoS2" ><span>›</span></button>
+
+            <div class="nav-auto"> 
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual"> 
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="divisao">
+        <h3>Marcas dos Produtos</h3>
+    </div>
+
+    <div class="produtos">
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <a href="/html/produtos.html"><img class="img-Mobile" src="https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/24/56/24561694_top-whey-protein-concentrado-1kg-growth-supplements_m1_638179572573470653.png" alt="imagem do produto"></a>
+                <a href=/html/produtos.html"><img class="img-Pc" src="https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/24/56/24561694_top-whey-protein-concentrado-1kg-growth-supplements_m1_638179572573470653.png"></a>
+            </div>
+            <div class="descriçao_produtos">
+                <h3>GROWTH</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://madrugaosuplementos.vtexassets.com/arquivos/ids/163971/18057_3704_0_120.png?v=638298864852570000" alt="imagem do produto">
+                <a href="#"><img class="img-Pc" src="https://madrugaosuplementos.vtexassets.com/arquivos/ids/163971/18057_3704_0_120.png?v=638298864852570000" alt="imagem do produto"></a>
+            </div>
+            <div class="descriçao_produtos">
+                <h3>Max Titanium</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://tfbrnp.vtexassets.com/arquivos/ids/164497-500-auto?v=638615012745170000&width=500&height=auto&aspect=true" alt="imagem do produto">
+                <img class="img-Pc" src="https://tfbrnp.vtexassets.com/arquivos/ids/164497-500-auto?v=638615012745170000&width=500&height=auto&aspect=true" alt="imagem do produto">
+            </div>
+            <div class="descriçao_produtos">
+                <h3>Atlhetica Nutrition</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://vitafor.vtexassets.com/arquivos/ids/157497/ISF900BA-01.png?v=638430989200730000" alt="imagem do produto">
+                <img class="img-Pc" src="https://vitafor.vtexassets.com/arquivos/ids/157497/ISF900BA-01.png?v=638430989200730000" alt="imagem do produto">
+            </div>
+            <div class="descriçao_produtos">
+                <h3>Vitafor</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/24/56/24560584_combo-prohibido-finisher-3vs-nutrition-4545632_l2_637371602677078831.png" alt="imagem do produto">
+                <img class="img-Pc" src="https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/24/56/24560584_combo-prohibido-finisher-3vs-nutrition-4545632_l2_637371602677078831.png" alt="imagem do produto">
+            </div>
+            <div class="descriçao_produtos">
+                <h3>3VS Nutrition</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://imgs.search.brave.com/y0zv7pEJNlIox3PNWW8-4Aoez_dFWJLZbW-gCmRSS-A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kMnZx/NHM5NDNvOGNiNC5j/bG91ZGZyb250Lm5l/dC9DdXN0b20vQ29u/dGVudC9Qcm9kdWN0/cy8xMy8yMC8xMzIw/NTk1M19iY3Bvd2Rl/ci1iY2FhLWVtLXBv/LXVsdHJhLXByZW1p/dW0tZ28tbnV0cml0/aW9uLTY1NjJfczFf/NjM2MzEwNTMyNTcz/NTI2MDAwLnBuZw" alt="imagem do produto">
+                <img class="img-Pc" src="https://imgs.search.brave.com/y0zv7pEJNlIox3PNWW8-4Aoez_dFWJLZbW-gCmRSS-A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kMnZx/NHM5NDNvOGNiNC5j/bG91ZGZyb250Lm5l/dC9DdXN0b20vQ29u/dGVudC9Qcm9kdWN0/cy8xMy8yMC8xMzIw/NTk1M19iY3Bvd2Rl/ci1iY2FhLWVtLXBv/LXVsdHJhLXByZW1p/dW0tZ28tbnV0cml0/aW9uLTY1NjJfczFf/NjM2MzEwNTMyNTcz/NTI2MDAwLnBuZw" alt="imagem do produto">
+            </div>
+            <div class="descriçao_produtos">
+                <h3>GO Nutrition</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/24/55/24557449_syntha-6-edge-bsn-7224_m3_636758200946417408.png" alt="imagem do produto">
+                <img class="img-Pc" src="https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/24/55/24557449_syntha-6-edge-bsn-7224_m3_636758200946417408.png" alt="imagem do produto">
+            </div>
+            <div class="descriçao_produtos">
+                <h3>BSN 2</h3>
+            </div>
+
+        </div>
+
+        <div class="background_produtos">
+
+            <div class="imagem_produtos">
+                <img class="img-Mobile" src="https://www.nedistribuidora.com.br/sourcer/storage/images/produtos/PANIC___300G_-_FRUIT_PUNCH___ADAPTOGEN___PR_-TREINO_efb098e_thumb.webp" alt="imagem do produto">
+                <img class="img-Pc" src="https://www.nedistribuidora.com.br/sourcer/storage/images/produtos/PANIC___300G_-_FRUIT_PUNCH___ADAPTOGEN___PR_-TREINO_efb098e_thumb.webp" alt="imagem do produto">
+            </div>
+            <div class="descriçao_produtos">
+                <h3>Adaptogen Science</h3>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="divisao">
+        <h3>Mais Avaliados</h3>
+    </div>
+
+    <div class="produtos2">
+
+        <div class="botao" onclick="mudarprodutos(1)"><h1>‹</h1></div>
+        <div class="botao desligado botao-Mobile" id="botaoextra" onclick="mudarprodutos(3)"><h1>‹</h1></div>
+        
+        <div class="marginProdutos">
+
+            <div class="background_produtos" id="imgProduto1">
+
+                <div class="imagem_produtos">
+                    <a href="produtos.html"><img class="img-Mobile" src="https://madrugaosuplementos.vtexassets.com/arquivos/ids/166302/000764-Morango.png?v=638334143298070000"></a>
+                    <a href="produtos.html"><img class="img-Pc" src="https://madrugaosuplementos.vtexassets.com/arquivos/ids/166302/000764-Morango.png?v=638334143298070000" alt="imagem do produto"></a>
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Whey</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos" id="imgProduto2">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://integralmedica.vtexassets.com/arquivos/ids/166741-800-auto?v=638563018421900000&width=800&height=auto&aspect=true" alt="imagem do produto">
+                    <a href="#"><img class="img-Pc" src="https://integralmedica.vtexassets.com/arquivos/ids/166741-800-auto?v=638563018421900000&width=800&height=auto&aspect=true" alt="imagem do produto"></a>
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Creatina</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos" id="imgProduto3">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://cdn.awsli.com.br/800x800/409/409181/produto/291791840/creamass-integralmedica-3kg-baunilha-9be4zaq2wm.png" alt="imagem do produto">
+                    <img class="img-Pc" src="https://cdn.awsli.com.br/800x800/409/409181/produto/291791840/creamass-integralmedica-3kg-baunilha-9be4zaq2wm.png" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Hiper-Calórico</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos" id="imgProduto4">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://integralmedica.vtexassets.com/arquivos/ids/165308/BCAA-120-caps.png?v=638203652482000000" alt="imagem do produto">
+                    <img class="img-Pc" src="https://integralmedica.vtexassets.com/arquivos/ids/165308/BCAA-120-caps.png?v=638203652482000000" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>BCAA</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos" id="imgProduto5">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://integralmedica.vtexassets.com/arquivos/ids/165336-800-auto?v=638203672219200000&width=800&height=auto&aspect=true" alt="imagem do produto">
+                    <img class="img-Pc" src="https://integralmedica.vtexassets.com/arquivos/ids/165336-800-auto?v=638203672219200000&width=800&height=auto&aspect=true" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Maltodextrina</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://images.tcdn.com.br/img/img_prod/1146697/omega_3_1000mg_120caps_qualynutri_75_1_472593371db79e426d364cb3fc6b8d7c.png">
+                    <img class="img-Pc" src="https://images.tcdn.com.br/img/img_prod/1146697/omega_3_1000mg_120caps_qualynutri_75_1_472593371db79e426d364cb3fc6b8d7c.png">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Ômega 3</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos" id="imgProduto6">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://hyperapharma.vteximg.com.br/arquivos/ids/166305-1000-1000/7896714292397_1-20230802-194145-20230808-215331.png?v=638273046802970000" alt="imagem do produto">
+                    <img class="img-Pc" src="https://hyperapharma.vteximg.com.br/arquivos/ids/166305-1000-1000/7896714292397_1-20230802-194145-20230808-215331.png?v=638273046802970000" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Vitamina D</h3>
+                </div>
+
+            </div>
+
+            <div class="background_produtos" id="imgProduto7">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://neoformula.com.br/cdn/shop/products/Colageno_Capsula.png?v=1675711371" alt="imagem do produto">
+                    <img class="img-Pc" src="https://neoformula.com.br/cdn/shop/products/Colageno_Capsula.png?v=1675711371" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Colágeno</h3>
+                </div>
+
+            </div>
+            <div class="background_produtos" id="imgProduto8">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://integralmedica.vtexassets.com/arquivos/ids/165360-500-auto?v=638203736165170000&width=500&height=auto&aspect=true">
+                    <img class="img-Pc" src="https://integralmedica.vtexassets.com/arquivos/ids/165360-500-auto?v=638203736165170000&width=500&height=auto&aspect=true" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Glutamina</h3>
+                </div>
+
+            </div>
+            <div class="background_produtos" id="imgProduto9">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://www.ipeervas.com.br/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/I/M/IMG_805.png" alt="imagem do produto">
+                    <img class="img-Pc" src="https://www.ipeervas.com.br/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/I/M/IMG_805.png" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Ginseng</h3>
+                </div>
+
+            </div>
+            <div class="background_produtos" id="imgProduto10">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://images.tcdn.com.br/img/img_prod/1280804/coenzima_q10_30_capsulas_nutrata_2261_1_6da45e23b8425a0bafd16f5147cdcb08.png" alt="imagem do produto">
+                    <img class="img-Pc" src="https://images.tcdn.com.br/img/img_prod/1280804/coenzima_q10_30_capsulas_nutrata_2261_1_6da45e23b8425a0bafd16f5147cdcb08.png" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>Coenzima Q10</h3>
+                </div>
+
+            </div>
+            <div class="background_produtos" id="imgProduto12">
+
+                <div class="imagem_produtos">
+                    <img class="img-Mobile" src="https://cdn.awsli.com.br/800x800/869/869420/produto/214030035/zma-90-caps-2jkk57p800.png" alt="imagem do produto">
+                    <img class="img-Pc" src="https://cdn.awsli.com.br/800x800/869/869420/produto/214030035/zma-90-caps-2jkk57p800.png" alt="imagem do produto">
+                </div>
+                <div class="descriçao_produtos">
+                    <h3>ZMA</h3>
+                </div>
+
+            </div>
+            
+
+        </div>
+
+        <div class="botao2" onclick="mudarprodutos(2)"><h1>›</h1></div>
+        <div class="botao2 desligado botao-Mobile" id="botaoextra2" onclick="mudarprodutos(4)"><h1>›</h1></div>
+    </div>
+
+<!-- base site -->
+    <div class="basesite">
+        <div class="separarletras">
+            <div class="letrasbase"><h4>Telefone:(xx)xxxx-xxxx</h4></div>
+            <div class="letrasbase"><h4>Suporte : Whatsapp xxxxx</h4></div>
+            <div class="letrasbase"><h4>Termos de Uso</h4></div>
+            <div class="letrasbase"><h4>Cancelameto de pedido</h4></div>
+            <div class="letrasbase"><h4>Status do Envio</h4></div>
+            <div class="letrasbase"><h4>Avaliados</h4></div>
+            </div>
+        <button class="voltar" onclick="voltarPagina()">Voltar</button>
+
+    </div>
+    
+    <!-- VLibras Widget -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+<!-- Fim VLibras Widget -->
+
+
+
+
+
+
+<style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: #232323;
+    transition: background 1s;
+    font-family: 'Poppins',  sans-serif;
+}
+
+/* navbar */
+
+header {
+    padding: 20px 4%;
+  }
+  
+  header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  
+  header a {
+    color: #7a7a7a;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+  }
+  
+  header a:hover {
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  header nav ul {
+    list-style-type: none;
+  }
+  
+  header nav.menu ul li {
+    display: inline-block;
+    padding: 0 40px;
+  }
+
+  /*menu mobile*/
+  
+  .overlay-menu{
+    background-color: #e971001f;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+  }
+  
+  .btn-abrir-menu i{
+    color: white;
+    font-size: 40px;
+  }
+  
+  .menu-mobile{
+    background-color: black;
+    height: 300vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+  }
+  
+  .menu-mobile.abrir-menu{
+    width: 70%;
+  }
+  
+  .menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+  }
+  
+  .menu-mobile .btn-fechar{
+    padding: 20px 5%;
+  }
+  
+  .menu-mobile .btn-fechar i{
+    color: #ffffff;
+    font-size: 30px;
+  }
+  
+  .menu-mobile nav ul{
+    text-align: right;
+  }
+  
+  .menu-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+  }
+  
+  .menu-mobile nav ul li a:hover{
+    background-color: white;
+    color: black;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+  }
+  
+  .input {
+    border-style: none;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    outline: none;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+    background-color: #d36600;
+    box-shadow: 0px 0px 3px #f3f3f3;
+    padding-right: 40px;
+    color: #fff;
+  }
+  
+  .input::placeholder,
+  .input {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+  }
+  
+  .input::placeholder {
+    color: #8f8f8f;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+    transition: .2s linear;
+  }
+  
+  .icon:focus~.input,
+  .input:focus {
+    box-shadow: none;
+    width: 250px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 3px solid #d36600;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+  #login {
+    font-size: 20px;
+    border-style: none;
+    outline: none;
+    background: none;
+    border: none;
+    color: #7a7a7a;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    cursor: pointer;
+  }
+
+  #login:hover {
+   color: #fff;
+   transform: scale(1.05); 
+  }
+
+  #button:hover {
+    color: #fff;
+    transform: scale(1.05);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+/* barra de pesquisa */
+.background_search{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;  
+    
+}
+
+.search_box input {
+    position: relative;
+    border: 0;
+    background-color: #fff;
+    color: black;
+    width: 400px;
+    height: 40px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: none !important;
+    font-family: inherit;
+    font-size: larger;
+    float: left;
+    outline: none;
+    padding-left: 10px;
+}
+
+#submit {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border:1px solid white;
+    width: 50px;
+    height: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+    margin-left: 399px;
+
+}
+
+#submit img{
+    width: 30px;
+}
+#results {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+/* slide */
+
+section.slider{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input, .img-Mobile{
+    display: none;
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+
+.slide-box img{
+    width: 80%;
+    height: 85%;
+    animation-iteration-count: infinite;
+    border-bottom: 1px solid white;
+    border-radius: 5%;
+    box-shadow: #000000 0.5;
+}
+
+.nav-manual, .nav-auto{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin-top: 45%;
+    justify-content: center;
+    
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 2px solid white;
+    padding: 6px 35px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+.botaoS,.botaoS2{
+  color: #d36600;
+  background: transparent;
+  font-size: 100px;
+  width: 40px;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none
+}
+.botaoS{
+  position: absolute;
+  top: 76%;
+  left: 9%;
+  transform: translate(-50%,-50%);
+}
+.botaoS2{
+  position: absolute;
+  top: 75%;
+  right: 6%;
+  transform: translate(-50%,-50%);
+}
+
+.botaoS:active{
+  border-radius: 50%;
+  border-left: 1px solid rgba(255, 255, 255, 0.389);
+  opacity: 0.8;
+}
+.botaoS2:active{
+  border-radius: 50%;
+  border-right: 1px solid rgba(255, 255, 255, 0.389);
+  opacity: 0.8;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 70px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: white;
+}
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: white;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+    transition: 1.5s;
+}
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+    transition: 1.5s;
+}
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+    transition: 1.5s;
+}
+/* divisao do site */
+
+.divisao{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+    font-size: x-large;
+    cursor: default;
+}
+
+/* produtos */
+
+.produtos{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding:0px 50px;
+    margin-left: 100px;
+}
+
+.produtos2{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding:10px 10px;
+    margin-bottom: 25px;
+}
+.marginProdutos{
+    width: 100%;
+    display: flex;
+    margin-left: 0%;
+    transition: 0.6s;
+}
+
+.botao{
+    display: grid;
+    width: 50px;
+    height: 50px;
+    place-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.botao h1,.botao2 h1{
+    display: grid;
+    width: 100%;
+    border-radius: 50%;
+    place-items: center;
+    color: blue;
+    cursor: pointer;
+}
+
+.botao h1:hover, .botao2 h1:hover{
+    color: orangered;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.botao2{
+    display: grid;
+    width: 50px;
+    height: 50px;
+    place-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 95%;
+    z-index: 2;
+    transform: translate(-50% -50%);
+    border-radius: 50%;
+}
+
+.background_produtos{
+    padding: 15px 40px;
+    position: relative;
+    float: left;
+}
+
+.imagem_produtos{
+    margin-left: 0px;
+    width: 200px;
+    height: 20vw;
+    max-width: 100%;
+}
+
+.imagem_produtos img{
+    object-fit: cover;
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.descriçao_produtos{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    cursor: default;
+}
+
+/*base site*/
+
+.basesite{
+    height: 100px;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.letrasbase h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    margin-left: 20px;
+    float: left;
+    padding: 20px 30px;
+    border-left: white 1px solid ;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+  /* loja */
+    .img-Pc{
+        display: none;
+    }
+
+    .img-Mobile{
+        display: block;
+    }
+    .nav-manual .manual-btn, .nav-auto div{
+        display: none;
+    }
+    section.slider, .imagem_produtos{
+        width: 100%;
+        height: 100%;
+    }
+    .background_search{
+        display: block;
+        width: 90%;
+    }
+    .search_box input{
+        margin-left: 15px;
+        height: 20px;
+        width: 90%;
+    }
+    .background_search i ,#submit{
+        height: 20px;
+        margin-left: 80%;
+    }
+    #submit img{
+        width: 20px;
+    }
+    .letrasbase h4{
+        font-size: large;
+    }
+    .divisao{
+        padding: 20px;
+    }
+    .produtos{
+        padding: 0px;
+        margin-left: 0;
+    }
+    .imagem_produtos{
+      width: 90px;
+      height: 30vw;
+      margin-bottom: 10px;
+    }
+    .imagem_produtos img{
+        object-fit: fill;
+        
+    }
+    .descriçao_produtos{
+        width: 100%;
+        font-size: small;
+    }
+    .background_produtos{
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 40vw;
+        margin-bottom: 10px;
+        padding: 15px 14px;
+    }
+    .botao{
+        width: 30px;
+        height: 30px;
+        font-size: x-small;
+    }
+    .botao2{
+        width: 30px;
+        height: 30px;
+        font-size: x-small;
+        left: 90%;
+        top: 42%;
+    }
+    .letrasbase h4{
+      margin-left: 0;
+      padding: 20px;
+      width: 100%;
+    }
+    .slide-box{
+      display: flex;
+      justify-content: center;
+    }
+  /* fim loja */
+
+  /* topo site */
+    .topo {
+        flex-direction: column;
+      }
+    
+      .menu, .btn, .logo, .input-wrapper {
+        display: none;
+      }
+    
+      section.topo-do-site {
+        padding: 20px 8%;
+      }
+    
+      .topo-do-site h1 {
+        font-size: 30px;
+      }
+    
+      .topo-do-site .img-topo-site img {
+        width: 100%;
+      }
+    
+      section.topo-do-site .topo {
+        gap: 40px;
+      }
+    
+      section.sobre {
+        padding: 80px 10%;
+      }
+    
+      .sobre .texto-sobre h2 {
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+      }
+    
+      .img-sobre img{
+        width: 100%;
+      }
+    /* fim topo site */
+}
+
+.desligado{
+    display: none !important;
+}
+</style>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+table{
+    width: 80%;
+}
+
+.cabecario{
+    background-color: rgba(255, 68, 0);
+    color: white;
+    font-size: larger;
+}
+
+tr:nth-child(2n){
+    background-color: gray;
+    color: white;
+}
+
+table,td,th{
+    padding: 5px 2px;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: 0.3s;
+}
+
+.genero{
+    font-size: x-large;
+}
+
+.enviar{
+    display: flex;
+    float: left;
+    width: 45%;
+    padding: 10px;
+    background-color: rgb(4, 188, 4);
+    border: 0;
+    color: white;
+}
+
+.excluir{
+    display: flex;
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(252, 21, 21);
+    border: 0;
+    margin-left: 5px;
+    color: white;
+}
+
+.excluir:hover,.enviar:hover,.cadastrar:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.cadastrar{
+    margin-top: 10px;
+    padding: 8px;
+    width: 80%;
+    border: 0;
+    background-color: rgb(2, 2, 149);
+    color: white;
+}

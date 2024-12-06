@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar senha</title>
+    <link rel="stylesheet" href="/css/alterarsenha.css">
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+    <script>
+        // Função para validar e alterar a senha
+        function validarSenhas() {
+            const senhaCadastrada = localStorage.getItem('senha'); // Recupera a senha cadastrada do localStorage
+            const senhaAtual = document.querySelector('input[name="current_password"]').value;
+            const novaSenha = document.querySelector('input[name="new_password"]').value;
+            const confirmarSenha = document.querySelector('input[name="confirm_password"]').value;
+            const feedback = document.getElementById('feedback');
+
+            feedback.textContent = ""; // Limpar mensagens anteriores
+
+            // Validar senha atual
+            if (senhaAtual !== senhaCadastrada) {
+                feedback.textContent = "A senha atual está incorreta.";
+                feedback.style.color = "red";
+                return false; 
+            }
+
+            // Validar nova senha
+            if (novaSenha.length < 6) {
+                feedback.textContent = "A nova senha deve ter pelo menos 6 caracteres.";
+                feedback.style.color = "red";
+                return false; 
+            }
+
+            if (novaSenha !== confirmarSenha) {
+                feedback.textContent = "A nova senha e a confirmação da nova senha não coincidem.";
+                feedback.style.color = "red"; 
+                return false; 
+            }
+
+            // Se tudo estiver correto, altera a senha no localStorage
+            localStorage.setItem('senha', novaSenha); // Armazena a nova senha no localStorage
+            feedback.textContent = "Senha alterada com sucesso!";
+            feedback.style.color = "green";
+            return true; 
+        }
+
+        // Função para voltar à página anterior
+        function voltarPagina() {
+            window.history.back();  // Volta para a página anterior no histórico
+        }
+    </script>
+</head>
+<body>
+<div class="geral">
+    <img class="imagem" src="/img/gymbrologoteste.png" alt="imagem logo">
+    <h3 class="titulo">Alterar senha</h3>
+    
+    <div id="feedback"></div> <!-- Área de feedback -->
+
+    <form action="/html/login.html" method="get" onsubmit="return validarSenhas()">
+        <label>
+            <p class="frase">Senha atual:</p>
+            <input class="texto" type="password" name="current_password" placeholder="Digite a senha atual:" required aria-label="Senha atual">
+        </label>
+
+        <label>
+            <p class="frase">Nova senha:</p>
+            <input class="texto" type="password" name="new_password" placeholder="Digite a nova senha:" required aria-label="Nova senha">
+        </label>
+
+        <label>
+            <p class="frase">Confirme a nova senha:</p>
+            <input class="texto" type="password" name="confirm_password" placeholder="Confirme a nova senha:" required aria-label="Confirmação da nova senha">
+        </label>
+        
+        <button class="enviar" type="submit">Enviar</button>
+    </form>
+
+    <!-- Botão Voltar no canto superior esquerdo -->
+    <button class="voltar" onclick="voltarPagina()">Voltar</button>
+</div>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</body>
+</html>

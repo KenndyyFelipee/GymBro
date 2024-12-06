@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos, alimentação e professores</title>
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins',  sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .search-bar {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d36600;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #d36600;
+            margin-bottom: 10px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            color: #ff6600;
+        }
+
+        .card-content p {
+            margin: 10px 0;
+            color: #bbb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #111;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GYMBRO</h1>
+        <div class="search-bar">
+            <input class="buscar" type="text" id="search" placeholder="Buscar treinos, professores ou alimentação..." onkeyup="filterCards()">
+        </div>
+
+        <button onclick="window.location.href='paginainicial.html'" style="position: absolute; top: 20px; left: 20px; background-color: #d36600; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Voltar à Página Inicial
+        </button>
+    </header>
+    <nav>
+        <a href="#treinos">Dicas de Treino</a>
+        <a href="#alimentacao">Alimentação</a>
+        <a href="#professores">Professores</a>
+    </nav>
+    <main>
+        <!-- Treinos -->
+        <section id="treinos">
+            <h2 class="section-title">Dicas de Treino</h2>
+            <div class="cards" id="cards">
+                <div class="card" data-title="Treino de Força">
+                    <a href="/html/treino força.html" style="text-decoration: none; color: inherit;">
+                        <img src="https://pratiquefitness.com.br/blog/wp-content/uploads/2023/12/O-que-fazer-quando-voce-nao-gosta-de-ir-a-academia.jpg" alt="Treino de força">
+                        <div class="card-content">
+                            <h3>Treino de Força</h3>
+                            <p>Descubra técnicas para ganhar massa muscular e melhorar sua força.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-title="Treino Funcional">
+                    <a href="/html/treino funcional.html" style="text-decoration: none; color: inherit;">
+                        <img src="https://blogeducacaofisica.com.br/wp-content/uploads/2017/06/treino-funcional.jpg" alt="Treino funcional">
+                        <div class="card-content">
+                            <h3>Treino Funcional</h3>
+                            <p>Exercícios dinâmicos para melhorar equilíbrio, agilidade e resistência.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Alimentação -->
+        <section id="alimentacao">
+            <h2 class="section-title">Dicas de Alimentação</h2>
+            <div class="cards">
+                <div class="card" data-title="Refeições Saudáveis">
+                    <a href="/html/Alimentação.html" style="text-decoration: none; color: inherit;">
+                        <img src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Refeições saudáveis">
+                        <div class="card-content">
+                            <h3>Refeições Saudáveis</h3>
+                            <p>Aprenda a montar pratos equilibrados para cada fase do seu treino.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card" data-title="Suplementação">
+                    <a href="/html/suplementação.html" style="text-decoration: none; color: inherit;">
+                        <img src="https://jpagora.com/wp-content/uploads/2019/08/26-08-prateleira-de-suplementos.jpg" alt="Suplementação">
+                        <div class="card-content">
+                            <h3>Suplementação</h3>
+                            <p>Informações sobre os melhores suplementos para complementar sua dieta.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professores -->
+        <section id="professores">
+            <h2 class="section-title">Professores Disponíveis</h2>
+            <div class="cards">
+                <div class="card" data-title="João Silva">
+                    <img src="https://img.freepik.com/fotos-gratis/jovem-atleta-feliz-usando-telefone-celular-enquanto-trabalhava-no-health-club_637285-8398.jpg?t=st=1732472578~exp=1732476178~hmac=8f7d1afcba3572e6818283ffe0539513f138e9ef9e32d86d55f18e7eb62d7e8f&w=900" alt="Professor João">
+                    <div class="card-content">
+                        <h3>João Silva</h3>
+                        <p>Especialista em musculação e reabilitação física.</p>
+                    </div>
+                </div>
+                <div class="card" data-title="Maria Oliveira">
+                    <img src="https://img.freepik.com/fotos-gratis/mulheres-jovens-em-pe-escrevendo-algo-no-caderno_1153-9035.jpg?t=st=1732472524~exp=1732476124~hmac=770d1f78f93f333560e9015dda530210bc7f88f58283c244fe0a80ea35d15651&w=900">
+                    <div class="card-content">
+                        <h3>Maria Oliveira</h3>
+                        <p>Personal trainer com foco em emagrecimento e bem-estar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©️ 2024 GYMBRO. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function filterCards() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <!-- Fim VLibras Widget -->
+</body>
+</html>

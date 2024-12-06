@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 3rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://s.zst.com.br/cms-assets/2021/01/peso-de-academia-5-.png);
+    min-height: 100vh; /* Garante que ocupa toda a altura da tela */
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Alterei para uma largura máxima em px */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.form-container h2 {
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 15px;
+    color: rgb(128, 128, 128);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+}
+
+.form-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d36600;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button.reset {
+    background-color: black;
+}
+
+.form-group button:hover {
+    background-color: #d36600bb; /* Cor alterada no hover para um tom mais escuro */
+}
+
+.form-group button.reset:hover {
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.titulo {
+    display: block;
+    margin: 40px auto; /* Centraliza o título horizontalmente */
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    text-align: center;
+}
+
+.fechar {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto; /* Centraliza o botão */
+    display: block;
+}
+
+button.voltar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+button.voltar:hover {
+    background-color: rgb(255, 120, 0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .form-container {
+        padding: 15px;
+        max-width: 90%; /* Reduz a largura máxima para telas menores */
+    }
+
+    .titulo {
+        font-size: 24px; /* Reduz o tamanho do texto do título */
+    }
+
+    .form-group button {
+        padding: 8px 10px; /* Reduz o espaçamento interno nos botões */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    button.voltar {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 20px; /* Ajusta para dispositivos muito pequenos */
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px; /* Ajusta o tamanho do texto nos campos de entrada */
+    }
+}

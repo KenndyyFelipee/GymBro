@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insira o código</title>
+    <link rel="stylesheet" href="/abc.css">
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+</head>
+<body>
+<script>
+    function validarEntrada(codigo) {
+        // Valida se o código tem exatamente 5 dígitos
+        const codigoPattern = /^\d{5}$/;
+        
+        if (codigoPattern.test(codigo)) {
+            return true;
+        } else {
+            alert("Por favor, insira um código válido de 5 dígitos.");
+            return false;
+        }
+    }
+
+    function voltar() {
+        window.location.href = "login.html";
+    }
+    function voltarPagina() {
+        window.history.back();  // Volta para a página anterior no histórico
+    }
+</script>
+
+<div class="uau">
+    <img class="imagem" src="/img/gymbrologoteste.png" alt="imagem logo">
+    <h3 class="titulo">Insira o código:</h3>
+    <p class="frase">Digite o código de 5 dígitos que lhe foi enviado</p>
+    
+    <form action="/html/alterarsenha.html" method="get" onsubmit="return validarEntrada(document.querySelector('.texto').value)">
+        <label>
+            <input class="texto" name="codigo" type="text" placeholder="Insira o código:" maxlength="5" required>
+        </label>
+        <button class="pesquisa" type="submit">Enviar</button>
+        <button class="reenviar" type="submit">Reenviar</button>
+        <button class="voltar" onclick="voltarPagina()">Voltar</button>
+        
+    </form>
+</div>
+
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</body>
+</html>

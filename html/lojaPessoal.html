@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBRO</title>
+    
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/menu.js" defer></script>
+    <script src="/javascript/scriptLoja.js" defer></script>
+
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/produtos.css">
+
+
+</head>
+
+<body>
+
+    <!-- topo site -->
+    <header>
+
+        <div class="interface">
+            <div class="logo">
+                <a href="/html/paginainicial.html">
+                <img src="/img/gymbrologoteste.png" alt="imagem logo" width="110px" height="100px">
+                </a>
+            </div> <!--fim logo-->
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="/html/paginainicial.html">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="/html/login.html"><input type="button" id="login" value="Login" onclick=""></a></li>
+                    <li><a href="#">Planos</a></li>
+                </ul>
+            </nav> <!--fim navbar-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div btn-fechar>
+                    <i class="bi bi-x"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="/html/paginainicial.html">Início</a></li>
+                        <li><a href="/html/cadastro.html">Cadastro</a></li>
+                        <li><a href="/html/login.html"><input type="button" id="login" value="Login" onclick=""></a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Planos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+        </div>
+
+    </header>
+
+    <!-- Fim topo site -->
+
+    <!-- principal -->
+
+    <div class="background_all">
+
+        <div class="marginPrincipal">
+            
+            <div class="left_imgProdutos">
+                <div class="left_img" id="imagem_left1" onmouseover="mudarImg(1)">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_652020-MLA49912378119_052022-F.webp" alt="imagem Produto">
+                </div>
+                <div class="left_img" id="imagem_left2" onmouseover="mudarImg(2)">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_696785-MLU75593775727_042024-F.webp" alt="imagem Produto">
+                </div>
+                <div class="left_img" id="imagem_left3" onmouseover="mudarImg(3)">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_848671-MLU72761409822_112023-F.webp" alt="imagem Produto">
+                </div>
+                <div class="left_img" id="imagem_left4" onmouseover="mudarImg(4)">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_2X_762699-MLU75593775755_042024-F.webp" alt="imagem Produto">
+                </div>
+                
+            </div>
+            <div class="background_imgProdutos">
+
+                <img onmousemove="zoom(1)" onmouseleave="zoom(2)" id="img_principal1" class="zoom1" src="https://http2.mlstatic.com/D_NQ_NP_2X_652020-MLA49912378119_052022-F.webp" alt="imagem Produto">
+                <img onmousemove="zoom(3)" onmouseleave="zoom(4)" id="img_principal2" class="zoom2 desligado" src="https://http2.mlstatic.com/D_NQ_NP_2X_696785-MLU75593775727_042024-F.webp" alt="imagem Produto">
+                <img onmousemove="zoom(5)" onmouseleave="zoom(6)" id="img_principal3" class="zoom3 desligado" src="https://http2.mlstatic.com/D_NQ_NP_2X_848671-MLU72761409822_112023-F.webp" alt="imagem Produto">
+                <img onmousemove="zoom(7)" onmouseleave="zoom(8)" id="img_principal4" class="zoom4 desligado" src="https://http2.mlstatic.com/D_NQ_NP_2X_762699-MLU75593775755_042024-F.webp" alt="imagem Produto">
+
+            </div>
+            
+            <div class="background_descProdutos">
+
+                <div class="principal_descProduto">
+
+                    <h1>Whey Protein 1kg</h1>
+                    <div class="background_estrelas">
+                        <h3 onclick="estrelaL(1)" class="estrelas" id="estrela1">★</h3>
+                        <h3 onclick="estrelaL(2)" class="estrelas" id="estrela2">★</h3>
+                        <h3 onclick="estrelaL(3)" class="estrelas" id="estrela3">★</h3>
+                        <h3 onclick="estrelaL(4)" class="estrelas" id="estrela4">★</h3>
+                        <h3 onclick="estrelaL(5)" class="estrelas" id="estrela5">★</h3>
+                    </div>
+                    <h3 class="destaque_descProduto">Oferta</h3>
+                    <h1>R$109,90</h1>
+                    <a href="#tabela"><h3 class="destaque_descProduto">Mais sobre</h3></a>
+
+                </div>
+
+            </div>
+
+            <div class="descCompra">
+                <h3 onclick="pagar(2)" class="btComprar">Comprar agora</h3>
+                <h3 class="btCarrinho">Adicionar ao carrinho</h3>
+            </div>
+
+            <div class="divisaoMargem">
+
+                <div class="divisaoProdutos">
+                    <h3>Pordutos Relacionados</h3>
+                </div>
+
+                <div class="backgroundRelacionados">
+                         
+                    <div class="botao" onclick="mudarprodutos(5)"><h1>‹</h1></div>
+                    <div class="botao desligado botao-Mobile" id="botaoextra" onclick="mudarprodutos(7)"><h1>‹</h1></div>
+
+                    <div class="marginRelacionados">
+
+                        <div class="principalRelacionados" id="item1">
+                            <div class="imgRelacionados">
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_805392-MLU78108587500_082024-F.webp" alt="imagem Produto">
+                            </div>
+                            <div class="decRelacionados">
+                                <h3>Preço</h3>
+                                <h4>frete grátis</h4>
+                                <h4>descriçao rápida</h4>
+                            </div>
+                            
+                        </div>
+                        <div class="principalRelacionados" id="item2">
+                            <div class="imgRelacionados">
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_635071-MLU76003918429_042024-F.webp" alt="imagem Produto">
+                            </div>
+                            <div class="decRelacionados">
+                                <h3>Preço</h3>
+                                <h4>frete grátis</h4>
+                                <h4>descriçao rápida</h4>
+                            </div>
+                            
+                        </div>
+                        <div class="principalRelacionados" id="item3">
+                            <div class="imgRelacionados">
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_864349-MLU70646182229_072023-F.webp" alt="imagem Produto">
+                            </div>
+                            <div class="decRelacionados">
+                                <h3>Preço</h3>
+                                <h4>frete grátis</h4>
+                                <h4>descriçao rápida</h4>
+                            </div>
+                            
+                        </div>
+                        <div class="principalRelacionados" id="item4">
+                            <div class="imgRelacionados">
+                                <img src="/img/imagem em branco.jpg" alt="imagem Produto">
+                            </div>
+                            <div class="decRelacionados">
+                                <h3>Preço</h3>
+                                <h4>frete grátis</h4>
+                                <h4>descriçao rápida</h4>
+                            </div>
+                            
+                        </div>
+                        <div class="principalRelacionados" id="item5">
+                            <div class="imgRelacionados">
+                                <img src="/img/imagem em branco.jpg" alt="imagem Produto">
+                            </div>
+                            <div class="decRelacionados">
+                                <h3>Preço</h3>
+                                <h4>frete grátis</h4>
+                                <h4>descriçao rápida</h4>
+                            </div>
+                        </div>
+                        <div class="principalRelacionados" id="item6">
+                            <div class="imgRelacionados">
+                                <img src="https://www.ufpb.br/ccau/contents/imagens/home/branco.png/@@images/image.png" alt="imagem Produto">
+                            </div>
+                            <div class="decRelacionados">
+                                <h3>Preço</h3>
+                                <h4>frete grátis</h4>
+                                <h4>descriçao rápida</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="botao2" onclick="mudarprodutos(6)"><h1>›</h1></div>
+                    <div class="botao2 desligado botao-Mobile" id="botaoextra2" onclick="mudarprodutos(8)"><h1>›</h1></div>
+                    
+                </div>
+                
+            </div>
+            
+        
+
+            <div class="descCartao">
+                <h2>Meios de pagamento</h2>
+                <h3>Descontos de ate 20%</h3>
+                <h3>Cartão de Credito</h3>
+                <div class="imgCartao">
+                    <img src="https://www.mobills.com.br/blog/wp-content/uploads/2022/06/logo-da-bandeira-mastercard.png" alt="imagem logo cartão">
+                    <img src="https://www.mobills.com.br/blog/wp-content/uploads/2022/06/logo-da-visa-bandeira-cartao-e1709061738681.png" alt="imagem logo cartão">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPSM4caqruJbaJPOinVQkVrkChPySSCzG8gg&s" alt="imagem logo cartão">
+                    <img src="https://i0.wp.com/justa.com.vc/wp-content/uploads/2023/11/American-Express-Logo.png?fit=1024%2C576&ssl=1" alt="imagem logo cartão">
+                </div>
+                <h3>Cartão de Debito</h3>
+                <div class="imgCartao">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVDrihokZSdPU0i4zTpv3D2IRMbpVdiZbz2g&s" alt="imagem logo cartão">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Santander_bank_logo.png/1200px-Santander_bank_logo.png" alt="imagem logo cartão">
+                </div>
+                <h3>Pix</h3>
+                <img src="https://i.pinimg.com/736x/01/9a/2d/019a2d16277d159cd2ef1298a4c60ab8.jpg" alt="imagem pix icone">
+                <h3>Boleto</h3>
+                <img src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo.png" alt="imagem boleto icone">
+
+            </div>
+        
+
+        </div>
+    
+        <div class="marginVendas">
+
+            <div class="background_venda">
+                <div class="background_imgVenda">
+                    <div class="imagemVenda">
+                        <img src="https://www.ufpb.br/ccau/contents/imagens/home/branco.png/@@images/image.png" alt="imagem da loja">
+                    </div>
+                    <div class="imagemLogo">
+                        <img src="https://www.ufpb.br/ccau/contents/imagens/home/branco.png/@@images/image.png" alt="imagem da logo">
+                    </div>
+                </div>
+
+                <div class="background_descVenda">
+                    <h3>GROWTH</h3>
+
+                    <div class="background_estrelas">
+                        <h3 class="estrelasL" id="estrelaL1">★</h3>
+                        <h3 class="estrelasL" id="estrelaL2">★</h3>
+                        <h3 class="estrelasL" id="estrelaL3">★</h3>
+                        <h3 class="estrelasL" id="estrelaL4">★</h3>
+                        <h3 class="estrelasL" id="estrelaL5">★</h3>
+                    </div>
+
+                    <img src="https://cdn-icons-png.flaticon.com/128/9918/9918694.png">
+                    <h4>Verificado</h4>
+                    <h4>Produtos vendidos</h4>
+
+                    <a href="#"><div class="irloja">
+                        <h5>Ir para a loja</h5>
+                    </div></a>
+                    
+                </div>
+        
+            </div>
+
+        
+
+            <section class="background_descrisao">
+                <div class="divisaoVenda">
+                    <h2>Sobre o produto</h2>
+                </div>
+                <div class="descriçao">
+                    <article>
+                        <p>
+                            Whey protein Growth fornece proteínas para quem deseja hipertrofia e definição muscular.
+                        </p>
+                    </article>
+                    
+                </div>
+            
+                <div class="background_tabela">
+                    <table id="tabela">
+                        <thead>
+                            <tr>
+                                <th>Nutriente</th>
+                                <th>Porção (30g)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Calorias</td>
+                                <td>120 kcal</td>
+                            </tr>
+                            <tr>
+                                <td>Proteínas</td>
+                                <td>24 g</td>
+                            </tr>
+                            <tr>
+                                <td>Carboidratos</td>
+                                <td>3 g</td>
+                            </tr>
+                            <tr>
+                                <td>Gorduras Totais</td>
+                                <td>1 g</td>
+                            </tr>
+                            <tr>
+                                <td>Gorduras Saturadas</td>
+                                <td>0,5 g</td>
+                            </tr>
+                            <tr>
+                                <td>Colesterol</td>
+                                <td>60 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Sódio</td>
+                                <td>50 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Açúcares</td>
+                                <td>1 g</td>
+                            </tr>
+                            <tr>
+                                <td>Fibras</td>
+                                <td>0 g</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        
+        </div>
+
+    </div>
+
+    
+    <!-- Fim principal -->
+
+    <!-- pagamento -->
+    
+    <div class="background_all2">
+
+        <h1 class="TituloCom">Formas de pagamento</h1>
+        
+        <div class="selecao">
+            <form action="/php/pagamento.php" method="post">
+
+                <div class="divisaoSele" id="troca1">
+                    <input type="radio" name="formPaga" id="cartaoCred" value="1" onchange="troca(1)">
+                    <label for="cartaoCred">Cartão de Credito</label>
+                </div>
+                <div class="divisaoSele" id="troca2">
+                    <input type="radio" name="formPaga" id="cartaoDeb" value="2" onchange="troca(2)">
+                    <label for="cartaoDeb">Cartão de Debito</label>
+                </div>
+                <div class="divisaoSele" id="troca3">
+                    <input type="radio" name="formPaga" id="boleto" value="3" onchange="troca(3)">
+                    <label for="boleto">Boleto</label>
+                </div>
+                <div class="divisaoSele" id="troca4">
+                    <input type="radio" name="formPaga" id="pix" value="4" onchange="troca(4)">
+                    <label for="pix">Zona do Pix</label>
+                </div>
+
+                <div class="cartao desligado" id="cartao" >
+                    <div class="bandeiraC">
+                        <img class="desligado" id="bandeira1" src="https://www.mobills.com.br/blog/wp-content/uploads/2022/06/logo-da-bandeira-mastercard.png" alt="Mastercard">
+                        <img class="desligado" id="bandeira2" src="https://www.mobills.com.br/blog/wp-content/uploads/2022/06/logo-da-visa-bandeira-cartao-e1709061738681.png" alt="Visa">
+                        <img class="desligado" id="bandeira3" src="https://i.pinimg.com/originals/e1/2b/ae/e12bae09f216293d433631d37ff33105.png" alt="American EXpress">
+                        <img class="desligado" id="bandeira4" src="https://logodownload.org/wp-content/uploads/2016/10/Diners-Club-Logo-2.png" alt="Dinner Club">
+                    </div>
+
+                    <div class="dadosCartao">
+                        <p id="NumeroC"></p>
+                        <p id="NomeC"></p>
+                        <p id="ValidadeC"></p>
+                        <p id="CVVC"></p>
+                    </div>
+                </div>
+
+                <div class="cartao2 desligado" id="cartao2" >
+                    <div class="bandeiraC">
+                        <img class="desligado" id="bandeira5" src="https://www.mobills.com.br/blog/wp-content/uploads/2022/04/Caixa-Economica-Federal.png" alt="Caixa">
+                        <img class="desligado" id="bandeira6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Santander_bank_logo.png/1200px-Santander_bank_logo.png" alt="Santander">
+                    </div>
+
+                    <div class="dadosCartao2">
+                        <p id="NumeroD"></p>
+                        <p id="NomeD"></p>
+                        <p id="ValidadeD"></p>
+                        <p id="CVVD"></p>
+                    </div>
+                </div>
+
+                
+
+                <div class="dados desligado" id="dado1">
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoC1" id="DadoC1" oninput="mostrarC()">
+                        <label for="DadoC1">Nome Completo</label>
+                    </div>
+
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoC2" id="DadoC2" oninput="mostrarC()">
+                        <label for="DadoC2">Número</label>
+                    </div>
+
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoC3" id="DadoC3" oninput="mostrarC()">
+                        <label for="DadoC3">Validade</label>
+                    </div>
+
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoC4" id="DadoC4" oninput="mostrarC()">
+                        <label for="DadoC4">CVV</label>
+                    </div>
+
+                </div>
+
+                <div class="dados desligado" id="dado2">
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoD1" id="DadoD1" oninput="mostrarD()">
+                        <label for="DadoC1">Nome Completo</label>
+                    </div>
+
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoD2" id="DadoD2" oninput="mostrarD()">
+                        <label for="DadoC2">Número</label>
+                    </div>
+
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoD3" id="DadoD3" oninput="mostrarD()">
+                        <label for="DadoC3">Validade</label>
+                    </div>
+                    
+                    <div class="diviDados">
+                        <input type="text" name="cartaoDadoD4" id="DadoD4" oninput="mostrarD()">
+                        <label for="DadoC4">CVV</label>
+                    </div>
+
+                </div>
+
+                <div class="dados desligado" id="dado3">
+                    <h2>Baixar boleto</h2>
+                    
+                </div>
+                <div class="dados desligado" id="dado4">
+                    <h2>Baixar Pix</h2>
+                </div>
+                <button id="btn" class="btnSelecao desligado" type="submit">Enviar</button>
+                <label class="voltar" id="voltar1" onclick="pagar(1)">Voltar</label>
+                <label class="voltar desligado" id="voltar2" onclick="pagar(0)">Voltar</label>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- VLibras Widget -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+<!-- Fim VLibras Widget -->
+    
+    <!-- Fim pagamento -->
+
+    <script src="/javascript/script.js"></script>
+</body>
+
+</html>

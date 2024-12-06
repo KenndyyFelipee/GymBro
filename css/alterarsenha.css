@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    background-color: #000000;
+    color: white;
+  }
+  
+  .geral {
+    margin-top: 100px;
+    border: solid;
+    border-radius: 12px;
+    border-color: orange;
+    border-width: 1px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    max-width: fit-content;
+    padding: 20px;
+    margin-left: 30%;
+    margin: center center center;
+  }
+  
+  .titulo {
+    margin-bottom: 40px;
+    padding-left: 60px;
+    font-weight: bolder;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 35px;
+    max-width: 500px;
+    text-align: center;
+    color: rgb(255, 136, 0);
+  }
+  
+  .frase {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .enviar {
+    background-color: rgb(255, 136, 0);
+    color: white;
+    font-size: 18px;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 13px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 25px;
+    height: 35px;
+  }
+  
+  .texto {
+    padding-right: 340px;
+    padding-bottom: 6px;
+    border-radius: 15px;
+    border: none;
+    padding-top: 6px;
+    font-size: 15px;
+    margin-left: -1%;
+    padding-left: 1px;
+    background-color: rgb(233, 233, 233);
+  }
+  
+  .imagem {
+    display: flex;
+    position: relative;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+  }
+  
+  /* Estilo do botão "Voltar" */
+  button.voltar {
+    position: fixed; /* Fixa o botão no canto superior esquerdo */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    padding: 10px 15px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    background-color: rgb(255, 136, 0); /* Cor de fundo laranja */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidade */
+    transition: background-color 0.3s ease; /* Transição suave de cor */
+  }
+  
+  button.voltar:hover {
+    background-color: rgb(255, 120, 0); /* Cor de fundo ao passar o mouse */
+  }
+  
+  input[type="password"]::placeholder {
+    color: #aaa;
+    opacity: 1;
+  }

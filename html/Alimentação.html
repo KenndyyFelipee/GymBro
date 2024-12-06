@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Alimentação Saudável</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Modo escuro */
+        body.dark-mode {
+            background: #121212;
+            color: #ddd;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d36600, #d36600);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Modo escuro - header */
+        body.dark-mode header {
+            background: linear-gradient(135deg, #333, #444);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .main-container {
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #d36600;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        /* Modo escuro - título da seção */
+        body.dark-mode .section-title {
+            color: #ff9800;
+        }
+
+        .table-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #d36600;
+            color: white;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        td {
+            background-color: #fff;
+            font-size: 1em;
+            color: #555;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Modo escuro - tabela */
+        body.dark-mode table {
+            background-color: #333;
+        }
+
+        body.dark-mode th {
+            background-color: #555;
+            color: #ddd;
+        }
+
+        body.dark-mode td {
+            background-color: #444;
+            color: #bbb;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Modo escuro - footer */
+        body.dark-mode footer {
+            background-color: #333;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+        }
+
+        /* Botão de modo escuro */
+        button {
+            background-color: #ff8000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s ease, background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #ff5722;
+        }
+
+        /* Modo escuro - botão */
+        body.dark-mode button {
+            background-color: #333;
+            color: #ff8000;
+        }
+
+        button.dark-mode:hover {
+            background-color: #444;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Alimentação Saudável - Tabela</h1>
+        <button id="mode-toggle" onclick="toggleDarkMode()">Ativar Modo Escuro</button>
+        <button onclick="window.location.href='Treino.html'" style="position: absolute; top: 20px; left: 20px; background-color: #d36600; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Voltar
+        </button>
+    </header>
+
+    <div class="main-container">
+        <h2 class="section-title">Exemplos de Refeições Saudáveis</h2>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Refeição</th>
+                        <th>Ingredientes Principais</th>
+                        <th>Benefícios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Café da manhã -->
+                    <tr>
+                        <td>Café da Manhã: Aveia com Frutas</td>
+                        <td>Aveia, banana, morango, mel, sementes</td>
+                        <td>Rica em fibras, antioxidantes e ajuda no controle do colesterol. Fornece energia para o início do dia.</td>
+                    </tr>
+
+                    <!-- Lanche da manhã -->
+                    <tr>
+                        <td>Lanche da Manhã: Iogurte com Granola</td>
+                        <td>Iogurte natural, granola, mel</td>
+                        <td>Boa fonte de proteínas e probióticos. Melhora a digestão e o sistema imunológico.</td>
+                    </tr>
+
+                    <!-- Almoço -->
+                    <tr>
+                        <td>Almoço: Frango Grelhado com Arroz Integral e Legumes</td>
+                        <td>Frango, arroz integral, brócolis, cenoura, azeite de oliva</td>
+                        <td>Combina proteínas magras com carboidratos complexos e vegetais ricos em vitaminas e fibras.</td>
+                    </tr>
+
+                    <!-- Lanche da tarde -->
+                    <tr>
+                        <td>Lanche da Tarde: Maçã com Amêndoas</td>
+                        <td>Maçã, amêndoas</td>
+                        <td>Combinação saudável de fibras, antioxidantes e gorduras saudáveis. Ajuda a controlar a fome até a próxima refeição.</td>
+                    </tr>
+
+                    <!-- Jantar -->
+                    <tr>
+                        <td>Jantar: Salada de Atum com Abacate</td>
+                        <td>Atum, abacate, folhas verdes, azeite de oliva, limão</td>
+                        <td>Fonte de proteínas, ácidos graxos saudáveis e fibras. Ajuda na recuperação muscular e melhora a saúde cardiovascular.</td>
+                    </tr>
+
+                    <!-- Ceia -->
+                    <tr>
+                        <td>Ceia: Chá de Camomila com Amêndoas</td>
+                        <td>Chá de camomila, amêndoas</td>
+                        <td>Ajuda no relaxamento e na qualidade do sono. Amêndoas oferecem gorduras saudáveis e proteínas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 GYMBRO - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para alternar entre os modos
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.getElementById('mode-toggle');
+
+            body.classList.toggle('dark-mode');
+            
+            // Muda o texto do botão conforme o estado
+            if (body.classList.contains('dark-mode')) {
+                button.textContent = 'Desativar Modo Escuro';
+            } else {
+                button.textContent = 'Ativar Modo Escuro';
+            }
+
+            saveModePreference();
+        }
+
+        // Verifica se o modo escuro foi previamente ativado e aplica a preferência
+        window.onload = function() {
+            if(localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('mode-toggle').textContent = 'Desativar Modo Escuro';
+            }
+        }
+
+        // Salva a preferência do usuário para o modo escuro
+        function saveModePreference() {
+            if(document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+    </script>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</body>
+</html>

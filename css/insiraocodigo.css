@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: #000000;
+    color: white;
+  }
+  
+  .uau{
+    margin-top: 100px;
+    border: solid;
+    border-radius: 12px;
+    border-color: orange;
+    border-width: 1px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    max-width: fit-content;
+    padding: 20px;
+    margin-left: 25%;
+    
+  }
+  
+  .titulo{
+    margin-bottom: 30px;
+    padding-left: 60px;
+    font-weight: bolder;
+    margin-top: -30px;
+  }
+  
+  .frase{
+    margin-bottom: 25px;
+    
+  }
+  
+  .pesquisa{
+    background-color: rgb(255, 136, 0);
+    color: white;
+    font-size: 18px;
+    padding: .600rem .9350rem;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 430px;
+    display: block;
+    margin-top: 25px;
+    
+  
+  }
+  
+  .cancela{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 15px;
+    padding: .600rem .9350rem;
+    display: block;
+    margin-top: -36px;
+    margin-left: 440px;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  .texto{
+   padding-right: 340px;
+   padding-bottom: 6px;
+   border-radius: 15px;
+   border: none ;
+   padding-top: 6px;
+   font-size: 15px;
+   margin-left: -1%;
+   padding-left: 1px;
+   color: black;
+   background-color: rgb(233, 233, 233);
+   border-style: initial;
+  
+  }
+  
+  ::placeholder{
+    position: relative;
+    display: flex;
+    color: black;
+    padding-left: 5px;
+  }
+  
+  .imagem{
+    display: flex;
+    position: relative;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+  }
+  
+  button.voltar {
+    position: fixed; /* Fixa o botão no canto superior esquerdo */
+    top: 20px; /* Distância de 20px do topo da tela */
+    left: 20px; /* Distância de 20px da margem esquerda da tela */
+    padding: 10px 15px; /* Espaçamento interno (10px em cima e embaixo, 15px à esquerda e à direita) */
+    font-size: 18px; /* Tamanho da fonte do texto */
+    background-color: rgb(255, 136, 0); /* Cor de fundo laranja */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves para dar profundidade ao botão */
+    transition: background-color 0.3s ease; /* Transição suave de cor ao passar o mouse */
+  }
+  
+  button.voltar:hover {
+    background-color: rgb(255, 120, 0); /* Cor de fundo laranja mais escuro quando o mouse passa sobre o botão */
+  }
+  
+  .reenviar{
+    background-color: rgba(255, 136, 0, 0.815);
+    color: white;
+    font-size: 18px;
+    padding: .600rem .9350rem;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 6px;
+    display: block;
+    margin-top: -40px;
+  }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMBRO | Esqueci a senha</title>
+    <link rel="stylesheet" href="/css/codigo.css">
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+    <script>
+        window.onload = function() {
+            // Recuperar e-mail e telefone do localStorage
+            const email = localStorage.getItem('email') || 'seuemail@exemplo.com';
+            const celular = localStorage.getItem('celular') || '(+55) *****';
+
+            // Exibir e-mail e telefone na página
+            document.getElementById('emailDisplay').innerText = email;
+            document.getElementById('celularDisplay').innerText = celular;
+        };
+        
+        // Função para voltar à página anterior
+        function voltarPagina() {
+            window.history.back();  // Volta para a página anterior no histórico
+        }
+    </script>
+</head>
+<body>
+    <div class="geral">
+        <img class="imagem" src="/img/gymbrologoteste.png" alt="imagem logo">
+        <h3 class="titulo">Redefina sua senha</h3>
+        <p class="forma">Deseja receber o código de que forma?</p>
+        <form action="insiraocodigo.html" method="get">
+            <label>
+                <input class="botao" type="radio" name="option" value="email" required>
+                <p class="frase">Enviar código pelo e-mail:</p>
+                <small class="email" id="emailDisplay">seuemail@exemplo.com</small>
+            </label>
+
+            <label>
+                <input class="botao2" type="radio" name="option" value="sms" required>
+                <p class="frase2">Enviar código pelo SMS:</p>
+                <small class="email" id="celularDisplay">(+55) *****</small>
+            </label>
+
+            <button class="enviar" type="submit">Continuar</button>
+        </form>
+        <button class="cancelar" type="button" onclick="window.location.href='esqueceuasenha.html'">Não é a sua conta?</button>
+        <button class="voltar" onclick="voltarPagina()">Voltar</button>
+    </div>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</body>
+</html>

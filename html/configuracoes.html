@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - GYMBRO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* Estilos Globais */
+        :root {
+            --primary-color: #d36600; /* Laranja principal */
+            --primary-hover: #e88327; /* Laranja mais claro */
+            --background-dark: #1c1c1c; /* Preto para fundo */
+            --background-card: #2a2a2a; /* Fundo dos cartões */
+            --border-color: #333; /* Cinza médio para bordas */
+            --text-light: #ffffff; /* Texto claro */
+            --text-muted: #b3b3b3; /* Texto secundário */
+            --transition-speed: 0.3s; /* Velocidade de transição */
+        }
+
+        /* Estilo Base */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--primary-color);
+        }
+
+        /* Layout Principal */
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: var(--background-card);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        /* Menu Lateral (Tabs) */
+        .tabs {
+            flex: 0 0 250px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--background-dark);
+            padding: 10px 0;
+            border-right: 2px solid var(--border-color);
+        }
+
+        .tabs div {
+            padding: 15px;
+            color: var(--text-light);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        .tabs div:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .tabs div.active {
+            background-color: var(--primary-color);
+            font-weight: bold;
+            border-left: 5px solid var(--text-light);
+        }
+
+        .tabs div i {
+            font-size: 18px;
+        }
+
+        /* Conteúdo */
+        .content-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        /* Formulários */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            transition: border-color var(--transition-speed);
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        /* Botões */
+        button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Avatar */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--background-card);
+            color: var(--text-light);
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .close {
+            color: var(--text-muted);
+            font-size: 24px;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: var(--primary-hover);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .tabs {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                border-right: none;
+                border-bottom: 2px solid var(--border-color);
+            }
+
+            .tabs div {
+                justify-content: center;
+                gap: 5px;
+            }
+
+            .tabs div.active {
+                border-left: none;
+                border-bottom: 5px solid var(--text-light);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div id="tabName" class="active"><i class="bi bi-person"></i>Mudar Nome</div>
+            <div id="tabProfilePicture"><i class="bi bi-image"></i>Foto de Perfil</div>
+            <div id="tabEmail"><i class="bi bi-envelope"></i>Mudar E-mail</div>
+            <div id="tabPassword"><i class="bi bi-lock"></i>Mudar Senha</div>
+            <div id="tabMasterProfile"><i class="bi bi-shield-lock"></i>Perfil Master</div>
+        </div>
+
+        <div class="content-container">
+            <div id="contentName" class="content active">
+                <h3>Mudar Nome</h3>
+                <div class="form-group">
+                    <label for="newName">Novo Nome</label>
+                    <input type="text" id="newName" placeholder="Digite seu novo nome">
+                </div>
+                <button onclick="changeName()">Salvar</button>
+            </div>
+
+            <div id="contentProfilePicture" class="content">
+                <h3>Mudar Foto de Perfil</h3>
+                <div class="form-group">
+                    <img src="https://via.placeholder.com/150" id="profilePic" class="profile-pic" alt="Foto de perfil">
+                    <input type="file" id="newProfilePic" accept="image/*">
+                </div>
+                <button onclick="changeProfilePicture()">Salvar</button>
+            </div>
+
+            <div id="contentEmail" class="content">
+                <h3>Mudar E-mail</h3>
+                <div class="form-group">
+                    <label for="newEmail">Novo E-mail</label>
+                    <input type="email" id="newEmail" placeholder="Digite seu novo e-mail">
+                </div>
+                <button onclick="changeEmail()">Salvar</button>
+            </div>
+
+            <div id="contentPassword" class="content">
+                <h3>Mudar Senha</h3>
+                <div class="form-group">
+                    <label for="newPassword">Nova Senha</label>
+                    <input type="password" id="newPassword" placeholder="Digite sua nova senha">
+                </div>
+                <button onclick="changePassword()">Salvar</button>
+            </div>
+
+            <div id="contentMasterProfile" class="content">
+                <h3>Entrar com Perfil Master</h3>
+                <button onclick="openLoginModal()">Entrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login Master</h2>
+            <div class="form-group">
+                <label for="masterEmail">E-mail</label>
+                <input type="email" id="masterEmail" placeholder="Digite seu e-mail">
+            </div>
+            <div class="form-group">
+                <label for="masterPassword">Senha</label>
+                <input type="password" id="masterPassword" placeholder="Digite sua senha">
+            </div>
+            <button onclick="loginMaster()">Entrar</button>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tabs div').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.content').forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.getElementById('content' + tabId.charAt(3).toUpperCase() + tabId.slice(4)).classList.add('active');
+        }
+
+        document.querySelectorAll('.tabs div').forEach(tab => {
+            tab.addEventListener('click', function () {
+                switchTab(this.id);
+            });
+        });
+
+        function openLoginModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+    </script>
+</body>
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</html>

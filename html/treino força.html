@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos de Força - Musculação</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Modo escuro */
+        body.dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d36600, #ff8000);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10; /* Garante que o header fique acima do conteúdo */
+        }
+
+        /* Modo escuro - header */
+        body.dark-mode header {
+            background: linear-gradient(135deg, #1e1e1e, #333);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: color 0.3s ease;
+        }
+
+        /* Botão de modo escuro */
+        button {
+            background-color: #ff8000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s ease, background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #ff5722;
+        }
+
+        /* Modo escuro - botão */
+        body.dark-mode button {
+            background-color: #333;
+            color: #ff8000;
+        }
+
+        button.dark-mode:hover {
+            background-color: #444;
+            color: #fff;
+        }
+
+        .main-container {
+            padding: 20px;
+            margin-top: 100px; /* Ajustado para que o conteúdo não fique por trás do header fixo */
+        }
+
+        .section-title {
+            color: #d36600;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease;
+        }
+
+        /* Modo escuro - título */
+        body.dark-mode .section-title {
+            color: #ff9800;
+        }
+
+        .trainings-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .training-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse nos cards */
+        .training-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Imagem do card com efeito de zoom */
+        .card-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: opacity 1s ease, transform 0.3s ease;
+        }
+
+        /* Aumentar a imagem ao passar o mouse */
+        .training-card:hover .card-img img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #d36600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease;
+        }
+
+        /* Modo escuro - título do card */
+        body.dark-mode .card-content h3 {
+            color: #ff9800;
+        }
+
+        .card-content p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #000000;
+            line-height: 1.5;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Modo escuro - texto do card */
+        body.dark-mode .card-content p {
+            color: #000000;
+        }
+
+        /* Efeito quando o card for hover */
+        .training-card:hover .card-content p {
+            opacity: 1;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Modo escuro - footer */
+        body.dark-mode footer {
+            background-color: #333;
+        }
+
+        /* Efeito Parallax com Transição Suave */
+        .parallax {
+            background-image: url('https://images.unsplash.com/photo-1518587387514-c7c1597a7b84'); /* Substitua pela URL da sua imagem */
+            height: 400px;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+
+        /* Quando a página for carregada, o efeito de fade-in acontecerá */
+        body.loaded .parallax {
+            opacity: 1;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .trainings-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body class="loaded">
+
+    <header>
+        <h1>Treinos de Força - Musculação</h1>
+        <button id="mode-toggle" onclick="toggleDarkMode()">Ativar Modo Escuro</button>
+
+        <button onclick="window.location.href='Treino.html'" style="position: absolute; top: 20px; left: 20px; background-color: #d36600; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">
+            Voltar
+        </button>
+    </header>
+
+    <div class="parallax"></div> <!-- Efeito Parallax -->
+
+    <div class="main-container">
+        <h2 class="section-title">Dicas de Treinos para Aumento de Força</h2>
+        
+        <div class="trainings-container">
+            <!-- Treino 1 -->
+            <div class="training-card">
+                <div class="card-img">
+                    <img src="https://biofisic.com.br/wp-content/uploads/2021/03/melhorar-execucao-do-agachamento.jpg" alt="Treino de Força 1">
+                </div>
+                <div class="card-content">
+                    <h3>Treino de Agachamento</h3>
+                    <p>O agachamento é um exercício fundamental para aumentar a força das pernas e glúteos. Execute 4 séries de 6 a 8 repetições com carga progressiva.</p>
+                </div>
+            </div>
+
+            <!-- Treino 2 -->
+            <div class="training-card">
+                <div class="card-img">
+                    <img src="https://conteudo.imguol.com.br/c/entretenimento/b9/2018/10/11/homem-fazendo-supino-1539278407682_v2_615x300.jpg" alt="Treino de Força 2">
+                </div>
+                <div class="card-content">
+                    <h3>Supino Reto</h3>
+                    <p>O supino reto é um exercício clássico para fortalecer o peito e os tríceps. Realize 4 séries de 4 a 6 repetições com pesos elevados para ganho de força.</p>
+                </div>
+            </div>
+
+            <!-- Treino 3 -->
+            <div class="training-card">
+                <div class="card-img">
+                    <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/16198910-exercicio-de-levantamento-terra-homem-durante-seu-treino-no-ginasio-foto.jpg" alt="Treino de Força 3">
+                </div>
+                <div class="card-content">
+                    <h3>Levantamento Terra</h3>
+                    <p>O levantamento terra é um exercício completo que trabalha todo o corpo. Realize 3 a 5 séries de 5 repetições com carga alta para maximizar o ganho de força.</p>
+                </div>
+            </div>
+
+            <!-- Treino 4 -->
+            <div class="training-card">
+                <div class="card-img">
+                    <img src="https://pratiquefitness.com.br/blog/wp-content/uploads/2023/07/Remada-curvada-aprenda-a-fazer-e-conheca-os-beneficios-2.jpg" alt="Treino de Força 4">
+                </div>
+                <div class="card-content">
+                    <h3>Remada Curvada</h3>
+                    <p>Excelente para trabalhar as costas e os bíceps. Faça 4 séries de 6 a 8 repetições com progressão de carga ao longo das semanas.</p>
+                </div>
+            </div>
+
+            <!-- Treino 5 -->
+            <div class="training-card">
+                <div class="card-img">
+                    <img src="https://www.hipertrofia.org/blog/wp-content/uploads/2018/12/desenvolvimento-militar.jpg" alt="Treino de Força 5">
+                </div>
+                <div class="card-content">
+                    <h3>Desenvolvimento Militar</h3>
+                    <p>Fortalece os ombros e tríceps. Realize 4 séries de 4 a 6 repetições com carga progressiva.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 GYMBRO - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para alternar entre os modos
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.getElementById('mode-toggle');
+
+            body.classList.toggle('dark-mode');
+            
+            // Muda o texto do botão conforme o estado
+            if (body.classList.contains('dark-mode')) {
+                button.textContent = 'Desativar Modo Escuro';
+            } else {
+                button.textContent = 'Ativar Modo Escuro';
+            }
+
+            saveModePreference();
+        }
+
+        // Verifica se o modo escuro foi previamente ativado e aplica a preferência
+        window.onload = function() {
+            if(localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('mode-toggle').textContent = 'Desativar Modo Escuro';
+            }
+
+            // Aplica o efeito de fade na imagem de fundo
+            document.body.classList.add('loaded');
+        }
+
+        // Salva a preferência do usuário para o modo escuro
+        function saveModePreference() {
+            if(document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                localStorage.setItem('darkMode', 'false');
+            }
+        }
+    </script>
+
+        <!-- VLibras Widget -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <!-- Fim VLibras Widget -->
+
+</body>
+</html>

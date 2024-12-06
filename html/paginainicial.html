@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBRO</title>
+    <link rel="stylesheet" href="/css/stylePGinicial.css">
+    
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/menu.js" defer></script>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                <img src="/img/gymbrologoteste.png" alt="imagem logo" width="110px" height="100px">
+                </a>
+            </div> <!--fim logo-->
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="/php/master/login.php"><input type="button" id="login" value="Login" onclick=""></a></li>
+                    <li><a href="/html/loja.html">Loja</a></li>
+                </ul>
+            </nav> <!--fim navbar-->
+    
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+    
+            <div class="menu-mobile" id="menu-mobile">
+                <div btn-fechar>
+                    <i class="bi bi-x"></i>
+                </div>
+    
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="/html/cadastro.html">Cadastro</a></li>
+                        <li><a href="/php/master/login.php"><input type="button" id="login" value="Login" onclick=""></a></li>
+                        <li><a href="/html/loja.html">Loja</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="topo">
+                    <div class="texto-topo">
+                        <h1>GymBRO: Sua Academia Digital<span>!</span></h1>
+                        <p>Seu treino, seu ritmo, em qualquer lugar.</p>
+
+                        <div class="btn-registro">
+                            <a href="/html/cadastro.html">
+                                <button>Cadastre-se!</button>
+                            </a>
+                        </div>
+                    </div><!--fim textotopo-->
+
+                    <div class="img-topo-site">
+                    <!--<img src="/img/gst_bg_067_19.jpg" alt="imagem-topo" width="512px" height="512px">-->
+                    </div><!--fim img topo-->
+                </div><!--fim topo-->
+            </div><!--interface-->
+        </section>
+
+        <section id="sobre" class="sobre">
+            <div class="interface">
+                <h2 class="titulo">Transforme-se com <span>GYMBRO.</span></h2>
+                <div class="topo">
+                    <div class="sobreGymBRO">
+                        <!-- Card inteiro clicável -->
+                        <a href="/html/Treino.html" style="text-decoration: none; color: inherit;">
+                            <i class="bi bi-layout-wtf"></i>
+                            <h3>Treinamentos e<br> Programas</h3>
+                        </a>
+                    </div><!--fim sobreGymBRO-->
+        
+                    <div class="sobreGymBRO">
+                        <!-- Card inteiro clicável -->
+                        <a href="/html/loja.html" style="text-decoration: none; color: inherit;">
+                            <i class="bi bi-cart"></i>
+                            <h3>Loja Online</h3>
+                        </a>
+                    </div><!--fim planosGymBRO-->
+        
+                    <div class="sobreGymBRO">
+                        <!-- Card inteiro clicável -->
+                        <a href="/html/calculadoraimc.html" style="text-decoration: none; color: inherit;">
+                            <i class="bi bi-calculator"></i>
+                            <h3>Ferramentas e<br> Recursos Online</h3>
+                        </a>
+                    </div><!--fim calculadoraGymBRO-->
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="planos">
+            <div class="interface">
+                <h2 class="titulo">Planos</h2>
+                <div class="topo">
+                    <div class="img-port" style="background-image: url(/img/1.png);"></div>
+                    <div class="img-port" style="background-image: url(/img/2.png);"></div>
+                    <div class="img-port" style="background-image: url(/img/3.png);"></div>
+                </div>
+               
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- VLibras Widget -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- Fim VLibras Widget -->
+</body>
+</html>

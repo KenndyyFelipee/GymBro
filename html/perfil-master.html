@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Master - Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="/css/perfilmaster.css">
+    <link rel="shortcut icon" href="/img/gymbrologoteste.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Usuários</h1>
+        <button id="logoutButton">Logout</button>
+    </header>
+
+    <main>
+        <section id="userForm">
+            <h2>Adicionar Usuário</h2>
+            <input type="email" id="newEmail" placeholder="Digite o e-mail do novo usuário" required>
+            <input type="password" id="newPassword" placeholder="Digite a senha do novo usuário" required>
+            <button id="addUserButton">Adicionar Usuário</button>
+        </section>
+
+        <section id="userList">
+            <h2>Usuários Registrados</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Usuários serão listados aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GYMBRO. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para adicionar um usuário
+        document.getElementById('addUserButton').addEventListener('click', function () {
+            const email = document.getElementById('newEmail').value;
+            const password = document.getElementById('newPassword').value;
+
+            if (email && password) {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                users.push({ email, password });
+                localStorage.setItem('users', JSON.stringify(users));
+                displayUsers();
+                document.getElementById('newEmail').value = '';
+                document.getElementById('newPassword').value = '';
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+
+        // Função para exibir os usuários
+        function displayUsers() {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const userTableBody = document.getElementById('userTableBody');
+            userTableBody.innerHTML = '';
+
+            users.forEach((user, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.email}</td>
+                    <td>
+                        <button onclick="editUser(${index})">Editar</button>
+                        <button onclick="deleteUser(${index})">Excluir</button>
+                    </td>
+                `;
+                userTableBody.appendChild(row);
+            });
+        }
+
+        // Função para editar um usuário
+        function editUser(index) {
+            const users = JSON.parse(localStorage.getItem('users'));
+            const user = users[index];
+            const newEmail = prompt('Novo e-mail:', user.email);
+            const newPassword = prompt('Nova senha:', user.password);
+
+            if (newEmail && newPassword) {
+                users[index] = { email: newEmail, password: newPassword };
+                localStorage.setItem('users', JSON.stringify(users));
+                displayUsers();
+            }
+        }
+
+        // Função para excluir um usuário
+        function deleteUser(index) {
+            const users = JSON.parse(localStorage.getItem('users'));
+            users.splice(index, 1);
+            localStorage.setItem('users', JSON.stringify(users));
+            displayUsers();
+        }
+
+        // Logout
+        document.getElementById('logoutButton').addEventListener('click', function () {
+            localStorage.removeItem('loggedIn');
+            window.location.href = '/html/configuracoes.html'; // Redireciona para a página de login
+        });
+
+        // Carregar usuários ao iniciar
+        displayUsers();
+        function voltarPagina() {
+            window.history.back();  // Volta para a página anterior no histórico
+        }
+    </script>
+        <button class="voltar" onclick="voltarPagina()">Voltar</button>
+    
+
+        <!-- VLibras Widget -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+<!-- Fim VLibras Widget -->
+</body>
+</html>
